@@ -1,0 +1,73 @@
+baseurl = "http://epiviz.cbcb.umd.edu/help/"
+title = "Epiviz"
+languageCode = "en-us"
+theme = "hugo-multi-bootswatch"
+paginate = 5
+
+[[menu.main]]
+    name = "Tutorials"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "tutorials"
+    url = "http://epiviz.cbcb.umd.edu/help/tutorials/"
+[[menu.main]]
+    name = "Documentation"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+    url = "http://epiviz.cbcb.umd.edu/help/documentation/"
+
+[params]
+    # language code for your website
+    languagecode = "en-US"
+
+    # name of the site author; used in header meta information
+    author = "epiviz"
+
+    # copyright text; used in footer
+    copyright = "2016 ~ epiviz"
+
+    # social links, used in footer, these must be full URLs.
+    twitter     = "https://twitter.com/epiviz"
+    github      = "https://github.com/epiviz"
+    # facebook    = "https://www.facebook.com/<username>"
+    # delicious   = "https://delicious.com/<username>"
+    # linkedin    = "https://www.linkedin.com/in/<username>"
+    # flickr      = "https://www.flickr.com/photos/<username>"
+
+    # show default summaries on the frontpage or not
+    use_summaries = false
+
+[params.strings]
+    # name of the link to the homepage
+    home_navbar_link = "Home"
+
+    # name of the link to the blog page
+    blog_navbar_link = "News"
+
+    # name of the header used in the post list page
+    posts_list_header = "Recent articles"
+
+    # used date format
+    date_format = '02.01.2006'
+
+[params.theme]
+    inverse = false     # indicating if the theme should use inversed colors
+    name = "simplex"   # name of the theme to use
+
+    # list of possible theme names that can be used
+    # name = "cerulean"
+    # name = "cosmo"
+    # name = "cyborg"
+    # name = "default"
+    # name = "flatly"
+    # name = "journal"
+    # name = "lumen"
+    # name = "paper"
+    # name = "readable"
+    # name = "sandstone"
+    # name = "simplex"
+    # name = "slate"
+    # name = "spacelabs"
+    # name = "superhero"
+    # name = "united"
+    # name = "yeti"
