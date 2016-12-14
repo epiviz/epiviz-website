@@ -1,0 +1,6 @@
+baseurl = "http://localhost:8000/tutorials"
+title = "Epiviz"
+languageCode = "en-us"
+theme = "hugo-theme-learn"
+
+canonifyURLs = true
