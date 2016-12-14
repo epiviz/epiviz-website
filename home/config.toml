@@ -1,4 +1,4 @@
-baseurl = "http://epiviz.cbcb.umd.edu/help/"
+baseurl = "http://localhost:8000"
 title = "Epiviz"
 languageCode = "en-us"
 theme = "hugo-multi-bootswatch"
@@ -9,12 +9,12 @@ paginate = 5
     pre = "<i class='fa fa-heart'></i>"
     weight = -110
     identifier = "tutorials"
-    url = "http://epiviz.cbcb.umd.edu/help/tutorials/"
+    url = "/tutorials/"
 [[menu.main]]
     name = "Documentation"
     pre = "<i class='fa fa-road'></i>"
     weight = -100
-    url = "http://epiviz.cbcb.umd.edu/help/documentation/"
+    url = "/documentation/"
 
 [params]
     # language code for your website
