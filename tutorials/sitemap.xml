@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:8000/tutorials/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/</loc>
     <lastmod>2016-11-22T14:12:05-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/</loc>
     <lastmod>2016-11-22T14:12:05-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/timp2014/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/timp2014/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/charts/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/charts/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/computed-measurements/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/computed-measurements/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/epivizr/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/epivizr/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/plugins/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/plugins/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:8000/tutorials/tutorials/websocket/</loc>
+    <loc>https://jkanche.github.io/epiviz-website/tutorials/tutorials/websocket/</loc>
     <lastmod>2016-11-23T14:08:04-05:00</lastmod>
   </url>
   
