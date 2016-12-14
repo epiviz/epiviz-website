@@ -1,0 +1,29 @@
+[[items]]
+title = "epivizR"
+image = "images/epiviz.jpg"
+thumb = "images/thumbs/1.png"
+alt = "epivizR"
+description = "EpivizR is an R/Bioconductor package that handles genomic data from R session to the epiviz app"
+url = "https://github.com/epiviz/epivizr"
+[[items]]
+title = "metavizR"
+image = "images/metaviz.png"
+thumb = "images/thumbs/2.png"
+alt = "metavizR"
+description = "Metaviz is an R pacakges that handles metagenomics datasets from an R session to the metaviz app"
+url = "https://github.com/epiviz/metavizr"
+[[items]]
+title = "epivizrData"
+image = "images/metaviz.png"
+thumb = "images/thumbs/2.png"
+alt = "epivizrData"
+description = "epivizrData is a data manager that handles various bioconductor data types."
+url = "https://github.com/epiviz/epivizrData"
+[[items]]
+title = "epivizrServer"
+image = "images/metaviz.png"
+thumb = "images/thumbs/2.png"
+alt = "epivizrServer"
+description = "epivizrServer is a server managemenet package that creates and manages the websocket session between R and the epiviz app"
+url = "https://github.com/epiviz/epivizrServer"
+
