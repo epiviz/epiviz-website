@@ -1,8 +1,10 @@
-baseurl = "https://jkanche.github.io/epiviz-website"
+baseurl = "http://epiviz.github.io"
 title = "Epiviz"
 languageCode = "en-us"
 theme = "hugo-multi-bootswatch"
 paginate = 5
+
+canonifyURLs = true
 
 [[menu.main]]
     name = "Tutorials"
