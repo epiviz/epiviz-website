@@ -1,0 +1,6 @@
+[submodule "home/themes/hugo-multi-bootswatch"]
+	path = home/themes/hugo-multi-bootswatch
+	url = https://github.com/mpas/hugo-multi-bootswatch.git
+[submodule "tutorials/themes/hugo-theme-learn"]
+	path = tutorials/themes/hugo-theme-learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
