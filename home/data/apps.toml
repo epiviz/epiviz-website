@@ -4,7 +4,7 @@ image = "images/epiviz.jpg"
 thumb = "images/epiviz.jpg"
 alt = "Epiviz"
 description = "Epiviz is an interactive visualization tool for functional genomics data"
-url = "http://epiviz.cbcb.umd.edu/3/?ws=sp9ShCJdS3c&useCookie=true&seqName=chr8&start=85996388&end=89163157&settings=default&"
+url = "http://epiviz.cbcb.umd.edu/4/?ws=Ago25FdPLVb&seqName=chr2&start=69300680&end=90699322&settings=default&useCookie=true&"
 giturl = "https://github.com/epiviz/epiviz"
 [[items]]
 title = "Metaviz"

@@ -11,7 +11,7 @@ title = "metavizR"
 image = "images/metaviz.png"
 thumb = "images/thumbs/2.png"
 alt = "metavizR"
-description = "metavizR is an R pacakge that handles metagenomics datasets from an R session to the metaviz app."
+description = "metavizR is an R package that handles metagenomics datasets from an R session to the metaviz app."
 url = "https://github.com/epiviz/metavizr"
 biocurl = ""
 [[items]]
