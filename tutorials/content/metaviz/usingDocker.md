@@ -29,18 +29,18 @@ https://docs.docker.com/compose/install/
 
 We provide an easy to use python script `metaviz.py` (available at [Metaviz Docker](https://github.com/jkanche/metaviz-docker)) to manage the Metaviz Docker instances. The following commands are available 
 
-| Command | Deescription                               | Params                            |
+| Command | Description                               | Params                            |
 |---------|--------------------------------------------|-----------------------------------|
 | build   | builds all the metaviz docker containers.  | None                              |
 | serve   | builds and runs the docker containers      | None                              |
 | restart | restarts metaviz docker containers         | None                              |
-| add     | Load a biom file to the docker instance.   | <file_location> <datasource_name> |
+| add     | Load a biom file to the docker instance.   | `<file_location> <datasource_name>` |
 
 `python metaviz.py -h` displays the available commands and params required to run.
 
 ## Adding Data from a Biom File to the Metaviz Docker Instance
 
-MetavizR is an R-package to manage metagenomic data from locally hosted biom files and visualize the data using the Metaviz UI. We provide functions as part of the R-package to import data from Biom Files into a Neo4J Database. The BioConductor container helps with this process. It installs the metavizR package and its dependencies and calls the functions to import data into the database. 
+MetavizR is an R-package to manage metagenomic data from locally hosted biom files and visualize the data using the Metaviz UI. We provide functions as part of the R-package to import data from Biom Files into a Neo4J Database. The BioConductor docker container helps with this process. It installs the metavizR package and its dependencies and calls the functions to import data into the database. 
 
 The following command loads the metagenomic dataset from a biom file (test_file.biom) and import it to the database as <dataset_name> 
 

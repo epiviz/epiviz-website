@@ -10,15 +10,13 @@ draft = true
 
 Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq for longitudinal analysis.
 
-Several packages will need to be downloaded and loaded:
 
--- metagenomeSeq, etec16s, and metavizr
+## Generating metagenomeSeq objects and computing SS-ANOVA testing
 
-I. Generating metagenomeSeq objects and computing SS-ANOVA testing
+We use a dataset from Paulson et al. when analyzing this time series data with a smoothing-spline.
 
-We use a dataset from Paulson et al. when analyzing this time series data with a smoothing-spline [2] and [3].
+First, import the etec16s dataset, select sample data from the first 9 days. Then use metavizr to launch an instance of the Metaviz app in a local web-browser.
 
-First, import the etec16s dataset, select sample data from the first 9 days, and choose the feature annotations of interest.
 ```{r, eval=FALSE}
 library(etec16s)
 library(metagenomeSeq)
@@ -48,9 +46,9 @@ timeSeriesFits <- fitMultipleTimeSeries(obj=etec16s,
                              B=1)
 ```
 
-II. Generating metavizR object to plot
+## Generating metavizR object to plot
 
-For plotting the data using Metaviz, we set the fit values as y-coordinates and timepoints as x-coordinates.  We need to call `toMRexperiment` with arguments for the sample and feature data, in this case timepoints and annotations, respectively.
+For plotting the data using Metaviz, we set the fit values as y-coordinates and timepoints as x-coordinates.  We need to call 'toMRexperiment' with arguments for the sample and feature data, in this case timepoints and annotations, respectively.
 
 ```{r, eval=FALSE}
 feature_order2 <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
@@ -59,9 +57,9 @@ splinesMRexp <- ts2MRexperiment(timeSeriesFits, feature_data = featureData(aggre
 etec16s_species <- aggregateByTaxonomy(etec16s, lvl="Species", feature_order = feature_order)
 ```
 
-III. Choosing features to plot and adding a line plot to Metaviz
+## Choosing features to plot and adding a line plot to Metaviz
 
-Finally, we add the MRexperiment as a measurement for Metaviz to plot.
+We select features with a timepoint with absolute log-fold change greater than 2. We add the MRexperiment as a measurement for Metaviz to plot the hierarchy as an icicle.
 
 ```{r, eval=FALSE}
 splines_to_plot <- sapply(1:nrow(MRcounts(splinesMRexp)), function(i) {max(abs(MRcounts(splinesMRexp[i,]))) >= 2})
@@ -72,6 +70,8 @@ ic_plot <- app$plot(splinesMRexp[splines_to_plot_indices,], datasource_name = "e
 
 ![](/images/metaviz/SplineAddIcicle.png)
 
+We then use the 'revisualize' method to add a Line Plot for the smoothing spline.
+
 ```{r, eval=FALSE}
 splineObj <- app$data_mgr$add_measurements(splinesMRexp[splines_to_plot_indices,], datasource_name = "etec16_base", control = metavizControl(norm=FALSE, aggregateAtDepth = 6))
 splineMeasurements <- splineObj$get_measurements()
@@ -80,12 +80,11 @@ splineChart <- app$chart_mgr$visualize("LinePlot", splineMeasurements)
 
 ![](/images/metaviz/SplineLinePlotAdded.png)
 
-IV. Updating chart settings from metavizR
+## Updating chart settings from metavizR
 
-We can update the colors and settings on the spline chart. For example, lets limit the y axis to be between -10 and 10. To do so we use the `set_chart_settings` method. We can list existing settings for a chart using the `list_chart_settings` function.
+We can update the colors and settings on the spline chart. For example, lets limit the y axis to be between -10 and 10. To do so we use the 'set_chart_settings' method. We can list existing settings for a chart using the 'list_chart_settings' function.
 
 ```{r, eval=FALSE, echo=FALSE}
-
 # list available charts
 app$chart_mgr$list_chart_types()
 
@@ -99,7 +98,6 @@ app$chart_mgr$set_chart_settings(splineChart, settings=settings, colors = colors
 ```
 
 ![](/images/metaviz/SplineLinePlotSettings.png)
-
 
 We can interact with the Metaviz session, such as hovering over the Line Plot to see highlight the path through the hierarchy.
 
