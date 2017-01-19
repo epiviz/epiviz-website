@@ -1,12 +1,20 @@
-github repo for epiviz-website using hugo
+# github repo for epiviz-website using hugo
 
-git submodule add -b master http://github.com/epiviz/epiviz.github.io.git dist
+## installation instructions.
+```
+git clone epiviz/epiviz-website
+git submodule init
+git submodule updat --recursive
+```
 
-to build
-./build.sh
+## add a dist folder that maps to epiviz.github.io
+`git submodule add -b master http://github.com/epiviz/epiviz.github.io.git dist`
 
-to publish to epiviz.github.io
-./deploy.sh
+# to build
+`./build.sh`
+
+# to publish to epiviz.github.io
+`./deploy.sh`
 
 
 
