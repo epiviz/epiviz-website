@@ -5,15 +5,14 @@ author = "Justin Wagner"
 weight = 5
 toc = true
 draft = true
-
 +++
 
 Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq for longitudinal analysis.
 
+## Generating metagenomeSeq objects and performing SS-ANOVA testing
 
-## Generating metagenomeSeq objects and computing SS-ANOVA testing
-
-We use a dataset from Paulson et al. when analyzing this time series data with a smoothing-spline.
+We use a dataset from "Individual-specific changes in the human gut microbiota after challenge with enterotoxigenic Escherichia coli and subsequent ciprofloxacin treatment" which includes data from 12 human samples that were challenged with E. coli then provided subsequent antibiotic treatment.  
+Samples were taken for 1 day pre-infection and 10 days post-infection. We will analyze this time series data with a smoothing-spline and plot it in a Metaviz workspace with a line plot over all features.  
 
 First, import the etec16s dataset, select sample data from the first 9 days. Then use metavizr to launch an instance of the Metaviz app in a local web-browser.
 
@@ -26,10 +25,11 @@ etec16s <- etec16s[,-which(pData(etec16s)$Day>9)]
 
 app <- startMetaviz("http://metaviz.cbcb.umd.edu") 
 ```
+This provides a new workspace.
 
 ![](/images/metaviz/SplineAppLaunch.png)
 
-Next, use metagenomeSeq to fit a smoothing-spline to the time series data.
+Next, use metagenomeSeq to fit a smoothing-spline to the time series data using the 'timeSeriesFits' method.
 
 ```{r, eval=FALSE}
 featureData(etec16s)$Kingdom <- "Bacteria"
@@ -48,7 +48,8 @@ timeSeriesFits <- fitMultipleTimeSeries(obj=etec16s,
 
 ## Generating metavizR object to plot
 
-For plotting the data using Metaviz, we set the fit values as y-coordinates and timepoints as x-coordinates.  We need to call 'toMRexperiment' with arguments for the sample and feature data, in this case timepoints and annotations, respectively.
+For plotting the data using Metaviz, we use the fit values as y-coordinates and timepoints as x-coordinates.  We need to call 'ts2MRexperiment' with arguments for the sample and feature data, in this case timepoints and annotations, respectively. We also 
+aggregate to the 'species' level.
 
 ```{r, eval=FALSE}
 feature_order2 <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
@@ -59,7 +60,7 @@ etec16s_species <- aggregateByTaxonomy(etec16s, lvl="Species", feature_order = f
 
 ## Choosing features to plot and adding a line plot to Metaviz
 
-We select features with a timepoint with absolute log-fold change greater than 2. We add the MRexperiment as a measurement for Metaviz to plot the hierarchy as an icicle.
+We select features with a timepoint with absolute log-fold change greater than 2. We add the MRexperiment as a measurement for Metaviz to plot the hierarchy in a 'FacetZoom' object.
 
 ```{r, eval=FALSE}
 splines_to_plot <- sapply(1:nrow(MRcounts(splinesMRexp)), function(i) {max(abs(MRcounts(splinesMRexp[i,]))) >= 2})
@@ -77,6 +78,8 @@ splineObj <- app$data_mgr$add_measurements(splinesMRexp[splines_to_plot_indices,
 splineMeasurements <- splineObj$get_measurements()
 splineChart <- app$chart_mgr$visualize("LinePlot", splineMeasurements)
 ```
+
+This adds the Line Plot to the workspace but we will need to set the range of the y-axis and modify the color scheme to produce a final workspace.
 
 ![](/images/metaviz/SplineLinePlotAdded.png)
 

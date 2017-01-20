@@ -115,7 +115,7 @@ We would then like to update the settings of the color scheme.  From the popup w
 
 ![](/images/metaviz/HeatmapColorSettings.png)
 
-Now the Metaviz workspace colors are set..
+Now the Metaviz workspace colors are set.
 
 ![](/images/metaviz/HeatmapColorSettingsComplete.png)
 
