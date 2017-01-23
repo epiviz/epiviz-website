@@ -1,7 +1,7 @@
 +++
 date = "2017-01-17T14:08:04-05:00"
 title = "MetagenomeSeq Differential Analysis"
-weight = 5
+weight = 2
 toc = true
 draft = true
 +++

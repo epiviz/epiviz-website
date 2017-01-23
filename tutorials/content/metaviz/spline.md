@@ -2,7 +2,7 @@
 date = "2017-01-13T14:08:04-05:00"
 title = "Longitudinal Data Analysis"
 author = "Justin Wagner"
-weight = 5
+weight = 3
 toc = true
 draft = true
 +++

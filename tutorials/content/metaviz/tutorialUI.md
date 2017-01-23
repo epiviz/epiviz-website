@@ -2,7 +2,7 @@
 date = "2017-01-17T14:08:04-05:00"
 title = "Visual Analysis of MSD16s Dataset"
 author = "Justin Wagner"
-weight = 5
+weight = 1
 toc = true
 draft = true
 

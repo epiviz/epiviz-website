@@ -2,7 +2,7 @@
 date = "2017-01-13T14:08:04-05:00"
 title = "Metaviz Docker Containers"
 author = "Jayaram Kancherla"
-weight = 5
+weight = 4
 toc = true
 draft = true
 
