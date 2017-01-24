@@ -10,8 +10,9 @@ draft = true
 
 ### Tutorials
 
-* [post 1: Visualize MSD16s dataset](tutorialUI)
-* [post 2: MetagenomeSeq Walkthrough](metagenomeSeq)
-* [post 3: Longitudinal Data analysis using etec16s](spline)
-* [post 4: Using Docker & self hosting](usingDocker)
-* [post 5: We host your data](hostingData)
+* [post 1: Metaviz Best Features](bestFeatures)]
+* [post 2: Visualize MSD16s dataset](tutorialUI)
+* [post 3: MetagenomeSeq Walkthrough](metagenomeSeq)
+* [post 4: Longitudinal Data analysis using etec16s](spline)
+* [post 5: Using Docker & self hosting](usingDocker)
+* [post 6: We host your data](hostingData)
