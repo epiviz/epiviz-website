@@ -48,6 +48,19 @@ The following command loads the metagenomic dataset from a biom file (test_file.
 
 Note: The import process runs in the background and to check if it is done, please use the command `docker-compose logs bioc`. The data won't be available until the bioc container is done with the import.
 
-### Visualizing Metagenomic Data
+## Accessing Neo4j Docker instance
 
-To visualize the data loaded through a biom file, please follow the instructions at [Link to BlogPost 1]()
+Once the data is loaded successfully, neo4j has a built-in UI to explore the graph datasets and can be accessed 
+at http://localhost:7474 We first show the feature nodes and hiearchy connected by edges.
+
+![](/images/metaviz/FeatureHierarchy.png)
+
+Then we show one path through the feature hierarchy to a leaf node and the count value of one sample as the edge to that leaf node. This denotes the observed counts for that feature in that sample.
+
+![](/images/metaviz/SampleCounts.png)
+
+### Visualizing Metagenomic Data using metaviz UI
+
+To visualize the data loaded through a biom file using metaviz, please follow the instructions at [Metaviz Tutorial using msd16s Dataset](tutorialUI).
+
+Highlights of the features available through the Metaviz Application, please visit [Metaviz Features](bestFeatures).
