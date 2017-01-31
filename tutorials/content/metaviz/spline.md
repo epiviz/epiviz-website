@@ -7,7 +7,7 @@ toc = true
 draft = true
 +++
 
-Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq for longitudinal analysis.
+Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq and the metavizr R package for longitudinal analysis.
 
 ## Generating metagenomeSeq objects and performing SS-ANOVA testing
 

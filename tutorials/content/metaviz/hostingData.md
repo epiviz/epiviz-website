@@ -43,22 +43,23 @@ nodes and sample nodes to denote observed count values.
 
     obj$toNEO4JDbHTTP(batch_url = "http://localhost:7474/db/data/batch", neo4juser = "user", neo4jpass = "pass", datasource = "mouseData")
 
-The graph database we use, Neo4j, has a browser that can show the
-structure of the database. We first show the feature nodes and hiearchy
-connected by edges.
+Abundance matrix data format
+----------------------------
 
-![](/images/metaviz/FeatureHierarchy.png)
+For the abundance matrix, which is typically a
+biom file, we need each entry of the "rows" field to have the
+"metadata"" field contain a key "taxonomy" with the value as the
+taxonomic lineage for that feature. We also need a non-null value for
+the "metadata" key for each entry of the "columns" field which denotes
+the sample attributes. We provide format validation in the metavizr 
+package with appropriate error messages for each criteria.
 
-Then we show one path through the feature hierarchy to a leaf node and
-the count value of one sample as the edge to that leaf node. This
-denotes the observed counts for that feature in that sample.
 
-![](/images/metaviz/SampleCounts.png)
+CBCB storage
+------------
 
-CBCB storage and abundance matrix data format
----------------------------------------------
-
-We currently store 5 datasets - 3 from published datasets and 2 from
+We can add datasets to our database and make them accessible through
+metaviz.cbcb.umd.edu. We currently store 5 datasets - 3 from published datasets and 2 from
 collaborators. The datasets are stored in one Neo4j instance with a
 top-level node that is the initial node we query of the disconnected
 graph for each dataset. These top-level nodes are what is rendered in
@@ -66,11 +67,3 @@ the initial measurement browser pop-up when adding a chart to the
 Metaviz workspace.
 
 ![](/images/metaviz/MetavizDatasets.png)
-
-We can add datasets to our database and make them accessible through
-metaviz.cbcb.umd.edu. For the abundance matrix, which is typically a
-biom file, we need each entry of the "rows" field to have the
-"metadata"" field contain a key "taxonomy" with the value as the
-taxonomic lineage for that feature. We also need a non-null value for
-the "metadata" key for each entry of the "columns" field which denotes
-the sample attributes.

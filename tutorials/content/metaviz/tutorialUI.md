@@ -8,7 +8,7 @@ draft = true
 
 +++
 
-Today we will discuss using the all the UI features of Metaviz to examine the Moderate to Severe childhood diaherrial disease dataset.  This dataset consists of case and control samples from children under the age of 6.  A total of 992 samples are present that are spread across 4 countries.  We will explore one country in detail and use heatmaps and stacked line plots to examine the differences in observed abundance of microbiome features at all levels a taxonomic hierarchy.
+Today we will discuss using all the UI features of Metaviz to examine the Moderate to Severe childhood diaherrial disease dataset.  This dataset consists of case and control samples from children under the age of 6.  A total of 992 samples are present that are spread across 4 countries.  We will explore one country in detail and use heatmaps and stacked line plots to examine the differences in observed abundance of microbiome features at all levels a taxonomic hierarchy.
 
 ## Creating a Navigation Widget for Exploration of a Taxonomic Hierarchy of Features
 
@@ -34,7 +34,7 @@ What is displayed in the Metaviz workspace is called a 'FacetZoom' object that s
 
 ## Creating Heatmap linked to taxonomic hierarchy and navigation updates
 
-The next step will be to add a heatmap that is linked to the 'FacetZoom' navigation widget and show how the components are linked to allow us to explore the data.  For this demonstration, we focus on 50 samples from the same country.  In this dataset, the samples from Bangladesh are evenly split between case and control and we will therefore focus on Bangladesh. In order to add a heatmap, we will need to click 'Add Visualizations' then 'Add new heatmap'.  Once the measurement browser pop-up appears, select the 'msd16s' datasource and click 'next'.The lowest level of the FacetZoom is the level of aggregation for data visualizations we will add next.  
+The next step will be to add a heatmap that is linked to the 'FacetZoom' navigation widget and show how the components are linked to allow us to explore the data.  For this demonstration, we focus on 50 samples from the same country.  For this dataset, we chose to focus on the samples from Bangladesh as they are evenly split between case and control. In order to add a heatmap, we will need to click 'Add Visualizations' then 'Add new heatmap'.  Once the measurement browser pop-up appears, select the 'msd16s' datasource and click 'next'.The lowest level of the FacetZoom is the level of aggregation for data visualizations we will add next.  
 
 ![](/images/metaviz/HeatmapPopup1.png)
 
@@ -112,7 +112,7 @@ Click 'Add new PCA scatter'
 
 ![](/images/metaviz/AddPCAPopupInit.png)
 
-Select the Heatmap samples, this is designated by msd16s_plot-heatmap-EU1va which is a random id, then click 'next'.
+Select the Heatmap samples, this is designated by msd16s_plot-heatmap-EU1va which is a random id assigned to every chart on the Metaviz workspace, then click 'next'.
 
 ![](/images/metaviz/AddPCAPopupSelected.png)
 
@@ -206,11 +206,12 @@ We will then start typing 'Firmucutes'.
 
 Choose 'Firmucutes', 'phylum' from the drop down menu. This will move the navigation bar to encompass that item. 
 
-![](/images/metaviz/TextSearchFirmicutesComplete.png)
+![](/images/metaviz/NavigationWidgetNavBarExpandAll.png)
 
 Beyond text-based search, the navigation bar can be moved, expanded, and reduced by using either the controls in the left-hand corner of the FacetZoom object or by dragging the red ends of the navigation bar.
 
-![](/images/metaviz/NavigationWidgetNavBarExpandAll.png)
+![](/images/metaviz/TextSearchFirmicutesComplete.png)
+
 
 ##  Navigate to see data visualizations update
 
@@ -226,6 +227,6 @@ Next, we change the aggregation level back to Order and navigate to have 'Bacter
 
 ![](/images/metaviz/NavigationBarRemovingAggregatingNodes.png)
 
-Finally, we see the highlight of the path in the hierarchy and across the heatmaps and stacked plots.
+Finally, all charts in the Metavize workspace are linked to the features on the FacetZoom control.  By hovering over any chart, we see that feature highlighted in all other charts as well as the path in the FacetZoom hierarchy. 
 
 ![](/images/metaviz/NavigationBarHighlightingPath.png)

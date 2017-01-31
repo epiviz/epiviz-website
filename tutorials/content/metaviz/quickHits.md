@@ -1,6 +1,6 @@
 +++
 date = "2017-01-24T14:08:04-05:00"
-title = "Metaviz Best Features"
+title = "Metaviz Quick Hits"
 author = "Justin Wagner"
 weight = 1
 toc = true
@@ -27,9 +27,9 @@ Metaviz also provides PCA ordination plots with the samples colored by a selecte
 
 ![](/images/metaviz/PCASettingsSelected.png)
 
-## Stacked Line Plots
+## Stacked Bar Plots
 
-With Metaviz, a user can create separate Stacked Line Plots for case and control samples as well as order each chart by a given attribute.
+With Metaviz, a user can create Stacked Bar Plots and group by or order by a given attribute. A user can also make separate charts for case and control samples for comparison.   
 
 ![](/images/metaviz/StackedPlotCaseGroupBy.png)
 
