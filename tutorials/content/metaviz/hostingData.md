@@ -67,3 +67,11 @@ the initial measurement browser pop-up when adding a chart to the
 Metaviz workspace.
 
 ![](/images/metaviz/MetavizDatasets.png)
+
+Contact Us
+------------
+
+For hosting a dataset, please email us at hcorrada@umiacs.umd.edu.
+
+For any functionality requests, please post an issue in the appropriate repository at https://github.com/epiviz/.
+
