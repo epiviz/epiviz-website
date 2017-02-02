@@ -1,0 +1,78 @@
+{{ partial "header.html" . }}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1">
+                <p>
+                Metaviz is tool for interactive visualization and exploration of metagenomic sequencing data. 
+                Metaviz a provides main navigation tool for exploring hierarchical feature data that is 
+                coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. 
+                Metaviz supports a flexible plugin framework so users can add new d3 visualizations. 
+                You can find more information about Metaviz at <a href="http://metaviz.org">Metaviz Help</a>.
+                </p>
+
+                <p>
+                The metavizr package implements two-way communication between the R/Bioconductor 
+                computational genomics environment and Metaviz. Objects in an R/Bioconductor session 
+                can be visualized and explored using the Metaviz navigation tool and plots. 
+                Metavizr uses Websockets to communicate between the browser Javascript client 
+                and the R/Bioconductor session. Websockets are the protocols underlying the 
+                popular Shiny system for authoring interactive web-based reports in R..
+                </p>
+            </div>
+
+        </div>
+
+        <h3>Applications</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            {{ range $.Site.Data.apps.items }}
+            <div class="col-sm-6 col-md-4 col-sm-offset-1">
+                <div class="thumbnail">
+                    <img src="{{.thumb}}" alt="{{.alt}}"/>
+                    <div class="caption">
+                        <h3>{{.title}}</h3>
+                        <p>{{.description}}</p>
+                        <p><a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Website</a> <a href="{{.giturl}}" target="_blank" class="btn btn-primary" role="button">Github</a></p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <h3>Tools and Packages </h3>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            {{ range $.Site.Data.packages.items }}
+            <div class="col-sm-6 col-md-4  col-sm-offset-1">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>{{.title}}</h3>
+                        <p>{{.description}}</p>
+                        <p><a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Github</a> <a href="{{.biocurl}}" target="_blank" class="btn btn-primary" role="button">Bioconductor</a></p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+{{ partial "footer.html" . }}

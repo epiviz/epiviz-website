@@ -4,3 +4,6 @@
 [submodule "tutorials/themes/hugo-theme-learn"]
 	path = tutorials/themes/hugo-theme-learn
 	url = https://github.com/matcornic/hugo-theme-learn.git
+[submodule "metaviz/themes/hugo-multi-bootswatch"]
+	path = metaviz/themes/hugo-multi-bootswatch
+	url = https://github.com/mpas/hugo-multi-bootswatch.git

@@ -4,7 +4,7 @@
 ```
 git clone epiviz/epiviz-website
 git submodule init
-git submodule updat --recursive
+git submodule update --recursive
 ```
 
 ## add a dist folder that maps to epiviz.github.io

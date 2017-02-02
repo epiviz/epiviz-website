@@ -1,4 +1,4 @@
-baseurl = "https://epiviz.github.io/tutorials"
+baseurl = "http://epiviz.github.io/tutorials"
 title = "Epiviz"
 languageCode = "en-us"
 theme = "hugo-theme-learn"

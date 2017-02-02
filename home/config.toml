@@ -1,4 +1,4 @@
-baseurl = "https://epiviz.github.io"
+baseurl = "http://epiviz.github.io"
 title = "Epiviz"
 languageCode = "en-us"
 theme = "hugo-multi-bootswatch"
@@ -6,6 +6,11 @@ paginate = 5
 
 canonifyURLs = true
 
+[[menu.main]]
+    name = "Metaviz"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -120
+    url = "/metaviz/"
 [[menu.main]]
     name = "Tutorials"
     pre = "<i class='fa fa-heart'></i>"
@@ -26,7 +31,7 @@ canonifyURLs = true
     author = "epiviz"
 
     # copyright text; used in footer
-    copyright = "2016 ~ epiviz"
+    copyright = "2017 ~ epiviz"
 
     # social links, used in footer, these must be full URLs.
     twitter     = "https://twitter.com/epiviz"
