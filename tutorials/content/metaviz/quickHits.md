@@ -38,8 +38,7 @@ Complementary to the ‘FacetZoom’ object, Metaviz provides text-based search 
 
 Choose 'Firmucutes', 'phylum' from the drop down menu. This will move the navigation bar to encompass that item. 
 
-![](/images/metaviz/TextSearchFirmicutesComplete.png)
-
+![](/images/metaviz/TextSearchTypingFirmicutes.png)
 Beyond text-based search, the navigation bar can be moved, expanded, and reduced by using either the controls in the left-hand corner of the FacetZoom object or by dragging the red ends of the navigation bar.
 
 ![](/images/metaviz/NavigationWidgetNavBarExpandAll.png)
