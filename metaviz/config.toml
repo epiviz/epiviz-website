@@ -1,4 +1,4 @@
-baseurl = "http://epiviz.github.io/metaviz"
+baseurl = "https://epiviz.github.io/metaviz"
 title = "Metaviz"
 languageCode = "en-us"
 theme = "hugo-multi-bootswatch"
@@ -10,7 +10,7 @@ canonifyURLs = true
     name = "Epiviz"
     pre = "<i class='fa fa-road'></i>"
     weight = -110
-    url = "http://epiviz.github.io/"
+    url = "https://epiviz.github.io/"
 [[menu.main]]
     name = "Documentation"
     pre = "<i class='fa fa-road'></i>"
@@ -20,7 +20,7 @@ canonifyURLs = true
     name = "Tutorials"
     pre = "<i class='fa fa-road'></i>"
     weight = -100
-    url = "http://epiviz.github.io/tutorials/metaviz"
+    url = "https://epiviz.github.io/tutorials/metaviz"
 
 [params]
     # language code for your website

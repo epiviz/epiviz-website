@@ -1,4 +1,4 @@
-baseurl = "http://epiviz.github.io"
+baseurl = "https://epiviz.github.io"
 title = "Epiviz"
 languageCode = "en-us"
 theme = "hugo-multi-bootswatch"
