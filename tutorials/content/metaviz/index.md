@@ -9,4 +9,4 @@ weight = 0
 
 ### Tutorials
 
-* [post 1: Metaviz Quick Overview](quickHits)
+* [post 1: Metaviz Quick Overview](overview)
