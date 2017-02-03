@@ -20,8 +20,7 @@ library(metavizr)
 In an R session we will use metagenomeSeq to compute differential abundance.  We focus on the msd16s as in the blogpost 'Visual Analysis using Metaviz' and focus on the 301 samples from Bangladesh.  In metagenomeSeq, we first subset the data to only Bangladesh samples, aggregate the count data to the species level, and normalize the count data.
 
 ```{r, eval=FALSE}
-feature_order <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species", "OTU")
-aggregated_feature_order <- feature_order[1:7]
+aggregated_feature_order <- colnames(fData(msd16s))[3:9]
 
 msd16s_species <- msd16s
 fData(msd16s) <- fData(msd16s)[feature_order]
@@ -51,7 +50,7 @@ After finding the features with a log-fold changes, we push those changes to an 
 logFC_bangladesh <- MRcoefs(results_bangladesh, number = nrow(normed_bangladesh))
 
 feature_names <- rownames(logFC_bangladesh[which(logFC_bangladesh[which(abs(logFC_bangladesh$logFC) > 1),]$adjPvalues < .1),]) 
-fSelection <- metavizr:::generateSelection(feature_names =feature_names , aggregation_level = aggregation_level, selection_type =2)
+fSelection <- generateSelection(feature_names = feature_names , aggregation_level = aggregation_level, selection_type =2)
 ```
 
 ## Creating metavizR object
@@ -59,7 +58,7 @@ fSelection <- metavizr:::generateSelection(feature_names =feature_names , aggreg
 The next step will be to launch a Metaviz instance from the R session, add a 'FacetZoom' object, modify the node selections to show those nodes that are differentially abundant, and add a heatmap.  In order to accomplish this, we will load the 'metavizr' package then we will create a Metaviz instance by calling 
 
 ```{r, eval=FALSE}
-app <- startMetaviz(host="http://metaviz.cbcb.umd.edu/")
+app <- startMetaviz()
 ```
 
 This will open a new Metaviz session on the default browser.  
@@ -70,7 +69,7 @@ Then, to add a FacetZoom object of the msd16s hierarchy the following call is ma
 
 ```{r, eval=FALSE}
 control <- metavizr::metavizControl(featureSelection = fSelection)
-icicle_plot <- app$plot(aggregated_species, datasource_name="mmssdd", control=control, feature_order = aggregated_feature_order)
+icicle_plot <- app$plot(aggregated_species, datasource_name="msd16s", control=control, feature_order = aggregated_feature_order)
 ```
 
 The 'plot' function adds the object to the Metaviz session.
