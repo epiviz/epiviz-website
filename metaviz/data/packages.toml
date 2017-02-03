@@ -7,6 +7,14 @@ description = "metavizR is an R package that handles metagenomics datasets from 
 url = "https://github.com/epiviz/metavizr"
 biocurl = ""
 [[items]]
+title = "epiviz"
+image = "images/epiviz.png"
+thumb = "images/thumbs/1.png"
+alt = "epiviz"
+description = "Epiviz is an interactive visualization tool for functional genomics data."
+url = "https://github.com/epiviz/epiviz"
+biocurl = ""
+[[items]]
 title = "epivizR"
 image = "images/epiviz.jpg"
 thumb = "images/thumbs/1.png"
