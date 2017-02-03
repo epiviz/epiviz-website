@@ -8,3 +8,4 @@ cp -r documentation/ dist/
 hugo -s metaviz/ -d ../dist/metaviz/
 cp -r metavizDocumentation/dataprovider/ dist/metaviz/documentation/
 cp -r metavizDocumentation/metavizr/ dist/metaviz/documentation/
+cp metavizDocumentation/IntroToMetavizr.html dist/metaviz/documentation/
