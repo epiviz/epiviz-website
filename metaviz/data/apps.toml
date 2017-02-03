@@ -1,12 +1,4 @@
 [[items]]
-title = "Epiviz"
-image = "images/epiviz.jpg"
-thumb = "images/epiviz.jpg"
-alt = "Epiviz"
-description = "Epiviz is an interactive visualization tool for functional genomics data"
-url = "http://epiviz.cbcb.umd.edu/4/?ws=Ago25FdPLVb&seqName=chr2&start=69300680&end=90699322"
-giturl = "https://github.com/epiviz/epiviz"
-[[items]]
 title = "Metaviz"
 image = "images/metaviz.png"
 thumb = "images/metaviz.png"
