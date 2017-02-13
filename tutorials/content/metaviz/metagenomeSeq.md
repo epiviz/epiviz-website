@@ -3,7 +3,6 @@ date = "2017-01-17T14:08:04-05:00"
 title = "Differential Analysis with MetagenomeSeq and Metaviz"
 weight = 2
 toc = true
-draft = true
 +++
 
 In this post we will show how to use Metaviz along with the Bioconductor package metagenomeSeq to perform a statistical and visual analysis of differential abundance of metagenomic data. 
