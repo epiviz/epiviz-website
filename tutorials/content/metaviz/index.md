@@ -10,3 +10,4 @@ weight = 0
 ### Tutorials
 
 * [post 1: Metaviz Quick Overview](overview)
+* [post 2: Differential Analysis with MetagenomeSeq and Metaviz](metagenomeSeq)
