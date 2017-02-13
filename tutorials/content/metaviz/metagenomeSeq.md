@@ -1,12 +1,12 @@
 +++
 date = "2017-01-17T14:08:04-05:00"
-title = "MetagenomeSeq Differential Analysis"
+title = "Differential Analysis with MetagenomeSeq and Metaviz"
 weight = 2
 toc = true
 draft = true
 +++
 
-Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq to compute differential abundance and visualize the results.  We will show how to use Metaviz features to further analyze and explore to accomplish statistically-guided interactive visualization.
+In this post we will show how to use Metaviz along with the Bioconductor package metagenomeSeq to perform a statistical and visual analysis of differential abundance of metagenomic data. 
 
 First, the following libraries will need to be downloaded and loaded:
 ```{r, eval=FALSE}
@@ -17,7 +17,8 @@ library(metavizr)
 
 ## Generating metagenomeSeq objects and computing differential abundance
 
-In an R session we will use metagenomeSeq to compute differential abundance.  We focus on the msd16s as in the blogpost 'Visual Analysis using Metaviz' and focus on the 301 samples from Bangladesh.  In metagenomeSeq, we first subset the data to only Bangladesh samples, aggregate the count data to the species level, and normalize the count data.
+In an R session we will use `metagenomeSeq` to compute differential abundance.  We focus on the `msd16s` dataset and its 301 samples from Bangladesh.  
+In `metagenomeSeq`, we first subset the data to only Bangladesh samples, aggregate the count data to the species level, and normalize the count data.
 
 ```{r, eval=FALSE}
 aggregated_feature_order <- colnames(fData(msd16s))[3:9]
@@ -32,7 +33,7 @@ bangladesh_species <- msd16s_species[, which(pData(msd16s_species)$Country == "B
 aggregated_species <-  cumNorm(aggregateByTaxonomy(bangladesh_species, lvl="species"), p = 0.75)
 ```
 
-We then aggregate another copy of the Bangladesh to aggregate to the "class" level, normalize count data, and compute differential abundance at the "class" level. 
+We then aggregate another copy of the Bangladesh subset to aggregate to the "class" level, normalize count data, and compute differential abundance at the "class" level between dysentery cases and controls. 
 
 ```{r, eval=False}
 aggregation_level <- "class"
@@ -44,7 +45,7 @@ mod <-  model.matrix(~1+Dysentery, data = bangladesh_sample_data)
 results_bangladesh <-  fitFeatureModel(normed_bangladesh, mod) # Check: ?results_bangladesh
 ```
 
-After finding the features with a log-fold changes, we push those changes to an MRexperiment that is aggreagted to "species" level and then explore the hiearchy. We now have the list of features that have a log fold-change greater than 2 and an adjusted p-value less than .1 between case and control samples from Bangladesh.  The differential abundance cutoff can be set to a different threshold and the aggregation level can also be changed to examine the dataset.
+We can then extract a list of bacterial classes that have a log fold-change greater than 2 and an FDR adjusted p-value less than .1 between dysentery case and control samples from Bangladesh. Once we have this list of differentially abundant classes, we propagate them to an MRexperiment at "species" level to visualize and explore these results.  The differential abundance cutoff can be set to a different threshold and the aggregation level can also be changed to examine the dataset.
 
 ```{r, eval=FALSE}
 logFC_bangladesh <- MRcoefs(results_bangladesh, number = nrow(normed_bangladesh))
@@ -55,7 +56,8 @@ fSelection <- generateSelection(feature_names = feature_names , aggregation_leve
 
 ## Creating metavizR object
 
-The next step will be to launch a Metaviz instance from the R session, add a 'FacetZoom' object, modify the node selections to show those nodes that are differentially abundant, and add a heatmap.  In order to accomplish this, we will load the 'metavizr' package then we will create a Metaviz instance by calling 
+The next step will be to launch a Metaviz instance from the R session, add a 'FacetZoom' object, modify the node selections to show those nodes that are differentially abundant, and add a heatmap showing only species within differentially abundant classes. 
+Load the 'metavizr' package and create a Metaviz instance by calling 
 
 ```{r, eval=FALSE}
 app <- startMetaviz()
