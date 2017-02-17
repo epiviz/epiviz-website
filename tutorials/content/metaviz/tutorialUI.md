@@ -12,6 +12,8 @@ Today we will discuss using all the UI features of Metaviz to examine the Modera
 
 ## Creating a Navigation Widget for Exploration of a Taxonomic Hierarchy of Features
 
+![Facet Zoom Tutorial](/images/metaviz/videos/Video1.gif)
+
 The landing page of metaviz.cbcb.umd.edu will show a blank workspace and a tool bar at the top.  We will first choose a dataset and add a navigation device to the workspace in these next steps.
 
 ![InitialMetavizView](/images/metaviz/LandingPage.png)
@@ -130,6 +132,8 @@ Then adjust the 'settings' to have the Min Y and Min X as -1 along with Max X an
 
 ## Creating Stacked Line Plots for Case and Control
 
+![Stacked Line Tutorial](/images/metaviz/videos/Video3.gif)
+
 The next step will be to add stacked line plots for Case and Control samples.  In order to do this, again click on 'Add Visualizations' then 'Add new stacked plot'.  
 
 ![](/images/metaviz/AddStackedPlot.png)
@@ -191,6 +195,8 @@ We can also perform that for the case samples.
 ![](/images/metaviz/StackedPlotCaseGroupBy.png)
 
 ## Adjusting the view navigation bar of the FacetZoom object
+
+![FacetZoom and Search Tutorial](/images/metaviz/videos/Video4.gif)
 
 We can focus on specific features by adjusting the navigation bar in the FacetZoom object.  One specific function is the text-based search which can be used by typing in the text box in the menu bar 'Text Based Search'.  
 
