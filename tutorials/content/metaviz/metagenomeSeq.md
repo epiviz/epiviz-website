@@ -106,21 +106,13 @@ The first setting to change is the 'Row labels' which will be set to 'Dysentery'
 
 Next, move the 'Row labels as colors' radio control to 'On'.
 
-![](/images/metaviz/HeatmapSettingsGroupByOn.png)
+![](/images/metaviz/HeatmapSettingsColorByOn.png)
 
 Now the heatmap rows will colored by the 'Dysentery' status.
 
 ![](/images/metaviz/HeatmapSettingsComplete.png)
 
-We would then like to update the settings of the color scheme.  From the popup window, We select an RColorBrewer template which is appropriate.
-
-![](/images/metaviz/HeatmapColorSettings.png)
-
-Now the Metaviz workspace colors are set.
-
-![](/images/metaviz/HeatmapColorSettingsComplete.png)
-
-As with a FacetZoom object added from the UI, a user can modify node states in order to examine the statistical test result.  We modify the navigation widget by changing the 'Actinobacteria' status from removed to aggregated. 
+As with a FacetZoom control added from the UI, a user can modify node states in order to examine the statistical test result.  We modify the navigation widget by changing the 'Actinobacteria' status from removed to aggregated. 
 
 ![](/images/metaviz/NavigationWidgetActino.png)
 
@@ -128,7 +120,7 @@ We can then hover on the new column of the heatmap to highlight the path through
 
 ![](/images/metaviz/NavigationWidgetActinoHover.png)
 
-A user can also traverse the hierarchy and change the aggregation setting for all nodes at a given level. To show this utility, we navigate to a lower level of the hierarchy by clicking on the 'Proteobacteria' node and set the aggregation level to 'Genus' by clicking on the row control node.
+A user can also traverse the hierarchy and change the aggregation setting for all nodes at a given level. To show this utility, we navigate to a lower level of the hierarchy by clicking on the 'Proteobacteria' node and set the aggregation level to 'Family' by clicking on the row control node.
 
 ![](/images/metaviz/NavigationWidgetDescendProteoBacteriaSetGenusAsAgg.png)
 
