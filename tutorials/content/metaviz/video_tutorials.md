@@ -1,7 +1,7 @@
 +++
 date = "2017-02-17T14:08:04-05:00"
 title = "Visual Analysis of MSD16S Dataset"
-author = "Justin Wagner, Jayaram Kancherla"
+author = "Justin Wagner"
 weight = 3
 toc = true
 draft = true
