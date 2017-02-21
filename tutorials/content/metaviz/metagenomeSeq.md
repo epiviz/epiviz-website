@@ -127,3 +127,16 @@ A user can also traverse the hierarchy and change the aggregation setting for al
 Then we can hover on a column that appears to show a difference between case and control samples.
 
 ![](/images/metaviz/NavigationWidgetHeatmapHoverShigella.png)
+
+We also can modify chart settings directly through metavizR.  The code block below shows how to list the chart settings, update the 'Row Labels' and 'Color-By' settings, and propogate those changes to the Metaviz interactive visualization.
+
+```{r, eval=FALSE}
+# List available chart settings 
+app$chart_mgr$list_chart_type_settings("HeatmapPlot")
+
+# Choose new settings
+settings <- list(rowLabel = 'Dysentery', showColorsForRowLabels = TRUE)
+
+# Apply settings to existing chart
+app$chart_mgr$set_chart_settings(heatmap, settings=settings)
+```
