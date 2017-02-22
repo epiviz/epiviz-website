@@ -16,7 +16,10 @@ We provide a video showing the workflow in each section and also provide a step 
 
 The following video describes the workflow to add a navigation control to explore the taxonomic feature hierarchy and also add a heatmap to visualize the abundance matrix.
 
-![Facet Zoom Tutorial](/images/metaviz/videos/Video1.gif)
+<video class="mejs-player" height=750 width=1200 controls>
+    <source src="/videos/Video1.mp4" />
+</video>
+
 
 <details>
 <summary>
@@ -49,7 +52,10 @@ Now that we can see entries in the heatmap, we can change the settings by clicki
 
 This tutorial continues from the previous video and adds a PCA Plot to examine variance for the same set of samples to the existing workspace
 
-![PCA Plot Tutorial](/images/metaviz/videos/Video2.gif)
+<video class="mejs-player" height=750 width=1200 controls>
+    <source src="/videos/Video2.mp4" />
+</video>
+
 
 <details>
 <summary>
@@ -66,7 +72,10 @@ To differentiate between samples, we can adjust the 'Color By' setting and set i
 
 This section describes the workflow to visualize feature proportions across case and control samples using Stacked Bar plots.
 
-![Stacked Line Plot Tutorial](/images/metaviz/videos/Video3.gif)
+<video class="mejs-player" height=750 width=1200 controls>
+    <source src="/videos/Video3.mp4" />
+</video>
+
 
 <details>
 <summary>
@@ -92,7 +101,10 @@ Now we can 'Group-by' 'AgeFactor' in the control samples by choosing the setting
 This video describes how to modify the state of the FacetZoom navigation widget and propagating feature node states to other visualizations in the workspace.
 We also provide a text based search to quickly navigate to the feature of interest.
 
-![Facet Zoom Tutorial](/images/metaviz/videos/Video4.gif)
+<video class="mejs-player" height=750 width=1200 controls>
+    <source src="/videos/Video4.mp4" />
+</video>
+
 
 <details>
 <summary>
