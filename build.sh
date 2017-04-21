@@ -27,7 +27,7 @@ cd dist/polymer/charts
 bower install
 bower install hcbravolab/epiviz-chart
 sed -i 's/bower_components/components/g' components/epiviz-charts/index.html
-echo "<META http-equiv="refresh" content=\"0;URL=charts/components/epiviz-charts/\">" >index.html
+echo "<META http-equiv="refresh" content=\"0;URL=components/epiviz-charts/\">" >index.html
 cd ../../..
 
 # build epiviz-data-source documentation
@@ -36,5 +36,5 @@ cd dist/polymer/datasource
 bower install
 bower install hcbravolab/epiviz-data-source
 sed -i 's/bower_components/components/g' components/epiviz-data-source/index.html
-echo "<META http-equiv="refresh" content=\"0;URL=datasource/components/epiviz-data-source/\">" >index.html
+echo "<META http-equiv="refresh" content=\"0;URL=components/epiviz-data-source/\">" >index.html
 cd ../../..
