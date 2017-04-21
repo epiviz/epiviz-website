@@ -7,9 +7,7 @@
 [submodule "metaviz/themes/hugo-multi-bootswatch"]
 	path = metaviz/themes/hugo-multi-bootswatch
 	url = https://github.com/mpas/hugo-multi-bootswatch.git
-[submodule "polymer-epiviz-chart"]
-	path = polymer-epiviz-chart
-	url = http://github.com/hcbravolab/epiviz-chart
-[submodule "polymer-epiviz-ds"]
-	path = polymer-epiviz-ds
-	url = http://github.com/hcbravolab/epiviz-data-source
+[submodule "dist"]
+	path = dist
+	url = http://github.com/epiviz/epiviz.github.io.git
+	branch = master
