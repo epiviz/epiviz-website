@@ -3,7 +3,7 @@ categories = [
   "news"
 ]
 date = "2017-05-01T12:52:12-05:00"
-title = "Epiviz Updates"
+title = "Epiviz Updates for Bioconductor 3.5 Release"
 tags = [
   "update"
 ]
@@ -14,16 +14,16 @@ We have implemented several new features into the epiviz library and the web app
 
 
 ## Table of Contents
-* [epivizR updates](#epivizr)
+* [epivizr updates](#epivizr)
 * [Introducing Epiviz desktop application](#epiviz-desktop)
 
 <a name="epivizr">
-## epivizR updates
+## epivizr updates
 </a>
     
-* __`Save` and `Restart` an epivizR session__
+* __`Save` and `Restart` an epivizr session__
 
-    We are introducing shareable workspaces in epivizR R/Bioconductor package. Users can use the `save` method to write the current epivizR R-session to disk (as a .rda file) and load it back later using the `restartEpiviz` method. This helps users/researchers to share their epivizr sessions with collaborators. Option to include and exclude data are available when saving the session.
+    We are introducing shareable workspaces in epivizr R/Bioconductor package. Users can use the `save` method to write the current epivizr R-session to disk (as a .rda file) and load it back later using the `restartEpiviz` method. This helps users/researchers to share their epivizr sessions with collaborators. Options to include and exclude data are available when saving the session.
 
     ```{r}
         require(epivizr)
@@ -50,7 +50,7 @@ We have implemented several new features into the epiviz library and the web app
         heatmap_plot <- app$chart_mgr$revisualize(chart_type = "HeatmapPlot", chart = means_track)
     ```
 
-* __Serving data from epiviz server__
+* __Visualizing data hosted in a remote epiviz server__
 
     We added a `load_remote_measurements` method that loads measurements and visualize data hosted at UMD with an interactive r-session. This helps develop integrative analysis workflows. 
 
@@ -74,9 +74,12 @@ We have implemented several new features into the epiviz library and the web app
         app$chart_mgr$visualize("HeatmapPlot", measurements = measurements)
     ```
 
+With this new feature we can use the epivizr package to fully reproduce the construction of 
+epiviz visualizations using an R script.
+
 * __Load Workspace__
 
-    We also added `load_workspace` method to load a workspace from an epivizR session. For example, if you know the `workspace_id` 
+    We also added `load_workspace` method to load a workspace in the epiviz app using epivizr session. For example, if you know the `workspace_id` 
 
     ```{r}
         app <- startEpiviz()
