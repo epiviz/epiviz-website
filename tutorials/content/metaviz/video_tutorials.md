@@ -5,10 +5,14 @@ author = "Justin Wagner"
 weight = 3
 toc = true
 draft = true
-
 +++
 
-Today we will discuss using all the UI features of Metaviz to examine the Moderate to Severe childhood diaherrial disease (msd16s) dataset. This dataset consists of case and control samples from children under the age of 6. A total of 992 samples are present that are spread across 4 countries. We will explore one country in detail and use heatmaps and stacked line plots to examine the differences in observed abundance of microbiome features at all levels a taxonomic hierarchy.
+Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. Metaviz supports a flexible plugin framework so users can add new d3 visualizations. 
+This post shows how to use all the UI features of Metaviz to examine the Moderate to Severe childhood diaherrial disease (msd16s) dataset. 
+A post providing an overview of Metaviz can be found [here](overview.html). 
+
+
+The dataset we use here consists of case and control samples from children under the age of 6. A total of 992 samples are present that are spread across 4 countries. We will explore one country in detail and use heatmaps and stacked line plots to examine the differences in observed abundance of microbiome features at all levels a taxonomic hierarchy.
 
 We provide a video showing the workflow in each section and also provide a step by step walkthrough with screenshots after the video.
 

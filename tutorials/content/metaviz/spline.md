@@ -7,7 +7,10 @@ toc = true
 draft = true
 +++
 
-Today we will discuss using Metaviz along with the Bioconductor package metagenomeSeq and the metavizr R package for longitudinal analysis.
+Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. 
+The metavizr package implements two-way communication between the R/Bioconductor computational genomics environment and Metaviz. Objects in an R/Bioconductor session can be visualized and explored using the Metaviz navigation tool and plots. 
+In this post we show how to use metavizr and the metagenomeSeq Bioconductor package to
+analyze data from a longitudinal study.
 
 ## Generating metagenomeSeq objects and performing SS-ANOVA testing
 

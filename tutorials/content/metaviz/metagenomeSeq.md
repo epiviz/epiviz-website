@@ -6,7 +6,8 @@ toc = true
 draft = true
 +++
 
-In this post we will show how to use Metaviz along with the Bioconductor package metagenomeSeq to perform a statistical and visual analysis of differential abundance of metagenomic data. 
+Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. 
+The metavizr package implements two-way communication between the R/Bioconductor computational genomics environment and Metaviz. Objects in an R/Bioconductor session can be visualized and explored using the Metaviz navigation tool and plots. In this post we show how to use metavizr and the metagenomeSeq Bioconductor package to perform a statistical and visual analysis of differential abundance of metagenomic data. 
 
 First, the following libraries will need to be downloaded and loaded:
 ```{r, eval=FALSE}

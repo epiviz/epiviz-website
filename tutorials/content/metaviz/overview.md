@@ -6,7 +6,7 @@ weight = 1
 toc = true
 +++
 
-This post introduces the most compelling User Interface features of Metaviz.  An in-depth overview of an entire visual analysis will be posted in the next few days.
+Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. Metaviz supports a flexible plugin framework so users can add new d3 visualizations. This post introduces the most compelling user interface features of Metaviz.  An in-depth visual analysis using Metaviz can be found [here](../video_tutorials/).
 
 ## Novel Navigation Utility for Exploring Taxonomic Hierarchies
 

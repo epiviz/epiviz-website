@@ -7,18 +7,19 @@ draft = true
 +++
 
 
-Today we will discuss loading data into a Metaviz backend database. We
+Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. 
+In this post we show how to load into a Metaviz backend database. We
 also talk about our plans to host a metagenomics data repository
 accessible at metaviz.cbcb.umd.edu.
 
 Loading data using metavizR
 ---------------------------
 
-As discussed in blog post 2 and 4 \[provide links\] metavizR is an
+metavizr is an
 R-package that can serve data from an R session to a Metaviz browser
 instance and load data into a persistent graph database. In this section
 we will load the mouseData available from the metagenomeSeq Bioconductor
-package. metavizR operates over a metagenomeSeq MRexperiment object to
+package. metavizr operates over a metagenomeSeq MRexperiment object to
 build a hierarchy tree data structure over the features and makes count
 data available at any level of the tree through aggregation.
 
