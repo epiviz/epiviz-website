@@ -16,6 +16,8 @@ We have implemented several new features into the epiviz library and the web app
 ## Table of Contents
 * [epivizr updates](#epivizr)
 * [Introducing Epiviz desktop application](#epiviz-desktop)
+* [Metavizr now on R/Bioconductor](#metavizr)
+* [Introducing Polymer](#polymer)
 
 <a name="epivizr">
 ## epivizr updates
@@ -113,5 +115,104 @@ To launch the desktop app that can load data from an R session -
 
 Note: Please allow installation of epiviz as a system application so that it can be launched from the command line.
 
+<a name="metavizr">
+## Metavizr now on Bioconductor (release 3.5)
+</a>
+
+`metavizr` is an R/Bioconductor package to interactively visualize metagenomic datasets. The `metavizr` package implements two-way communication between the R/Bioconductor environment and the metaviz web app for interactive visualization of microbiome sequencing results. The hierarchy of features from a microbiome sequencing result can be visualized with a navigation utility and count values are displayed dynamically updated heatmaps or stacked bar plots. Metavizr uses Websockets for communication between the browser Javascript client and the R environment.
+
+To Install metavizr through Bioconductor and try the package vignette, 
+
+```{r}
+    # install packahe
+    BiocInstaller::biocLite("metavizr")
+
+    #load vignette
+    require(metvizr)
+    browseVignettes("metavizr")
+```
+
+For more information, please visit the [R/Bioconductor page](http://www.bioconductor.org/packages/release/bioc/html/metavizr.html). If you have any problems, please post an issue on our [Github page](http://github.com/epiviz/metavizr).
+
+<a name="polymer">
+## Introducing epiviz polymer components
+</a>
+
+Note: This is currently a work in progress.
+
+We have been developing and exploring new ways to make our chart components versatile and extensible across various platforms and applications. We are developing epiviz [webcomponents](https://developer.mozilla.org/en-US/docs/Web/Web_Components) using the [Google Polymer library](https://www.polymer-project.org/). We developed custom web components for 
+
+* Handling data requests([epiviz-data-source](https://github.com/epiviz/epiviz-data-source))
+
+    This components handles data requests from a websocket/webserver connection. To add this element to a page, 
+
+    ```{html}
+        <epiviz-data-source
+            provider-type="epiviz.data.WebServerDataProvider" 
+            provider-id="umd" 
+            provider-url="http://epiviz.cbcb.umd.edu/data/main.php">
+        </epiviz-data-source>
+    ```
+
+* Visualizing data ([epiviz-charts-* components](https://github.com/epiviz/epiviz-chart))
+
+    We are developing epiviz chart components for our existing track and plot based charts. This includes genes track, blocks track, scatter plots, line plots, stacked-line plots, heatmaps etc.
+
+    To add any of these to your page, for example a genes track
+
+    ```{html}
+        <epiviz-genes-track use-default-data-provider="true"></epiviz-genes-track>
+    ```
+
+    Some of the new components we are developing are epiviz-environment and epiviz-navigation components. 
+
+    ### epiviz-environment
+    The main purpose of this component is to enable brushing and event handling across all its child elements. `epiviz-environment` can contain multiple charts as its children. When you hover over one of the charts, this sends an event to the environment. The environment then handles brushing of the key or region corresponding to the datapoint that was hovered across all the other charts in the environment.
+
+    For example, to add an environment on your page
+
+    ```{html}
+        <epiviz-environment>
+            <epiviz-genes-track class="charts" use-default-data-provider="true"></epiviz-genes-track><br/>
+            <epiviz-scatter-plot class="charts" use-default-data-provider="true"></epiviz-scatter-plot><br/>
+            <epiviz-blocks-track class="charts" use-default-data-provider="true"></epiviz-blocks-track><br/>
+            <epiviz-stacked-line-plot class="charts" use-default-data-provider="true"></epiviz-stacked-line-plot><br/>
+            <epiviz-stacked-line-track class="charts" use-default-data-provider="true"></epiviz-stacked-line-track><br/>
+            <epiviz-heatmap-plot class="charts" use-default-data-provider="true"></epiviz-heatmap-plot><br/>
+        </epiviz-environment>
+    ```
+
+    ### epiviz-navigation
+        
+    Our current epiviz application has genomic location defined at the application level. So all charts visualize data to only that region in the genome. To simultaneosuly look at data from multiple regions in the genome, we are adding a new component - `epiviz-navigation`. `epiviz-navigation` inherits from `epiviz-environment` and in addition, adds ui elements to easily navigate (change genomic location) or search (for genes/targets) the genome. A page can have multiple navigation components and navigation components can also be enclosed within an environment element. This enables us to visualize an entire dataset (using `epiviz-environment`) and also look at a specific region (using `epiviz-navigation`) at the same time. 
+
+    ```{html}
+        <epiviz-environment
+            chr="chr6">
+            # these charts show data from the entire chromosome (chr6)
+            <epiviz-genes-track class="charts" use-default-data-provider="true"></epiviz-genes-track><br/>
+            <epiviz-scatter-plot class="charts" use-default-data-provider="true"></epiviz-scatter-plot><br/>
+
+            # the charts inside the navigation only show data for the region defined below
+            <epiviz-navigation                   
+                chr="chr6"
+                start="64076201"
+                end="95088740" 
+                class="charts">
+                    <epiviz-genes-track class="charts" dim-s='["genes"]'></epiviz-genes-track>
+                    <epiviz-scatter-plot class="charts" dim-s='["affy1", "affy2"]'></epiviz-scatter-plot>
+            </epiviz-navigation>
+        </epiviz-environment>
+    ```
+
+### To install epiviz webcomponents (through [bower](http://bower.io/))
+
+    ```{JavaScript}
+        bower init
+        bower install --save epiviz/epiviz-chart
+        bower install --save epiviz/epiviz-data-source
+    ```
+
+To be part of our development, please install our components and let us know if you have any feedback or issues (through [Github](http://github.com/epiviz/epiviz-chart)).
 
 
