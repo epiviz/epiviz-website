@@ -24,7 +24,7 @@ on other developments in the Epiviz project.
 * [epivizr updates](#epivizr)
 * [Introducing Epiviz desktop application](#epiviz-desktop)
 * [Metavizr now on R/Bioconductor](#metavizr)
-* [Introducing Polymer](#polymer)
+* [Introducing epiviz webcomponents](#polymer)
 
 <a name="epivizr">
 ## epivizr updates
