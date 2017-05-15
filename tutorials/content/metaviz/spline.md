@@ -4,7 +4,6 @@ title = "Longitudinal Data Analysis"
 author = "Justin Wagner"
 weight = 3
 toc = true
-draft = true
 +++
 
 Metaviz is a tool for interactive visualization and exploration of metagenomic sequencing data. It provides a novel navigation tool for exploring hierarchical feature data that is coupled with multiple data visualizations including heatmaps, stacked bar charts, and scatter plots. 

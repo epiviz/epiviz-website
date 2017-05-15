@@ -4,8 +4,6 @@ title = "Metaviz Docker Containers"
 author = "Jayaram Kancherla"
 weight = 4
 toc = true
-draft = true
-
 +++
 
 ## Setup and Installation

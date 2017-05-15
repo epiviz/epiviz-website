@@ -3,7 +3,6 @@ date = "2017-01-23T14:08:04-05:00"
 title = "Hosting Data in Metaviz"
 weight = 5
 toc = true
-draft = true
 +++
 
 

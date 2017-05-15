@@ -10,7 +10,6 @@ tags = [
   "polymer",
   "epivizr"
 ]
-draft = true
 +++
 
 Bioconductor version 3.5 was released last month: http://bioconductor.org/news/bioc_3_5_release/. 
