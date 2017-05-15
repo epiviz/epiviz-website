@@ -2,18 +2,26 @@
 categories = [
   "news"
 ]
-date = "2017-05-01T12:52:12-05:00"
+date = "2017-05-15T12:52:12-05:00"
 title = "Epiviz Updates for Bioconductor 3.5 Release"
 tags = [
-  "update"
+  "update",
+  "metaviz",
+  "polymer",
+  "epivizr"
 ]
 draft = true
 +++
 
-We have implemented several new features into the epiviz library and the web application. 
+Bioconductor version 3.5 was released last month: http://bioconductor.org/news/bioc_3_5_release/. 
+This Bioconductor version
+includes updates to `epivizr` and a new package, `metavizr`, for interactive visualization 
+of metagenomic data. In this post we describe these, and take the opportunity to update
+on other developments in the Epiviz project.
 
 
-## Table of Contents
+
+## What's new!  
 * [epivizr updates](#epivizr)
 * [Introducing Epiviz desktop application](#epiviz-desktop)
 * [Metavizr now on R/Bioconductor](#metavizr)
@@ -119,9 +127,10 @@ Note: Please allow installation of epiviz as a system application so that it can
 ## Metavizr now on Bioconductor (release 3.5)
 </a>
 
-`metavizr` is an R/Bioconductor package to interactively visualize metagenomic datasets. The `metavizr` package implements two-way communication between the R/Bioconductor environment and the metaviz web app for interactive visualization of microbiome sequencing results. The hierarchy of features from a microbiome sequencing result can be visualized with a navigation utility and count values are displayed dynamically updated heatmaps or stacked bar plots. Metavizr uses Websockets for communication between the browser Javascript client and the R environment.
+We recently released our [metaviz](http://metaviz.org) application for interactive analysis
+of metagenomic data. It's companion R/Bioconductor pacakge, `metavizr`, implements two-way communication between the R/Bioconductor environment and the metaviz web app. The hierarchy of features from a microbiome sequencing result can be visualized with a hierarchical navigation utility and count values are displayed dynamically updated heatmaps or stacked bar plots. `metavizr` uses Websockets for communication between the browser Javascript client and the R environment. The `metavizr` package was released in Bioconductor 3.5.
 
-To Install metavizr through Bioconductor and try the package vignette, 
+To install metavizr through Bioconductor and try the package vignette, 
 
 ```{r}
     # install packahe
@@ -132,7 +141,8 @@ To Install metavizr through Bioconductor and try the package vignette,
     browseVignettes("metavizr")
 ```
 
-For more information, please visit the [R/Bioconductor page](http://www.bioconductor.org/packages/release/bioc/html/metavizr.html). If you have any problems, please post an issue on our [Github page](http://github.com/epiviz/metavizr).
+There are multiple tutorials on metaviz available on the metaviz [tutorial page](https://epiviz.github.io/tutorials/metaviz/), covering the application interactive visualization facilities and how to perform visual and statistical analysis using metavizr and metagenomeSeq.
+For more information, please visit the [R/Bioconductor page](http://www.bioconductor.org/packages/release/bioc/html/metavizr.html). If you have any problems, please post an issue on our [Github page](http://github.com/epiviz/metavizr). A preprint describing metaviz and metavizr is available on biorxiv: http://biorxiv.org/content/early/2017/03/06/105205.
 
 <a name="polymer">
 ## Introducing epiviz polymer components
@@ -213,6 +223,7 @@ We have been developing and exploring new ways to make our chart components vers
         bower install --save epiviz/epiviz-data-source
     ```
 
+These webcomponents are the building blocks for our upcoming update to the epiviz and metaviz web applications and, more importantly, the ability to embed epiviz visualizations in rmarkdown documents.
 To be part of our development, please install our components and let us know if you have any feedback or issues (through [Github](http://github.com/epiviz/epiviz-chart)).
 
 
