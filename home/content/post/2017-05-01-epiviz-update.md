@@ -245,11 +245,8 @@ We have been developing and exploring new ways to make our chart components vers
             <epiviz-genes-track class="charts" dim-s='["genes"]'></epiviz-genes-track>
             <epiviz-scatter-plot class="charts" dim-s='["affy1", "affy2"]'></epiviz-scatter-plot>
             <epiviz-blocks-track class="charts" dim-s='["affy1", "affy2"]'></epiviz-blocks-track><br/>
-            <epiviz-stacked-line-plot class="charts" dim-s='["affy1", "affy2"]'></epiviz-stacked-line-plot><br/>
-            <epiviz-stacked-line-track class="charts" dim-s='["affy1", "affy2"]'></epiviz-stacked-line-track><br/>
             <epiviz-heatmap-plot class="charts" dim-s='["affy1", "affy2"]'></epiviz-heatmap-plot><br/>
         </epiviz-environment>
-
 
     ### [epiviz-navigation](https://epiviz.github.io/polymer/charts/components/epiviz-charts/#epiviz-navigation)
         
