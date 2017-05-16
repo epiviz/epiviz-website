@@ -38,3 +38,5 @@ bower install hcbravolab/epiviz-data-source
 sed -i 's/bower_components/components/g' components/epiviz-data-source/index.html
 echo "<META http-equiv="refresh" content=\"0;URL=components/epiviz-data-source/\">" >index.html
 cd ../../..
+
+cp -r dist/polymer/datasource/components/epiviz-data-source dist/polymer/charts/components
