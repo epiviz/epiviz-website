@@ -22,6 +22,11 @@ canonifyURLs = true
     pre = "<i class='fa fa-road'></i>"
     weight = -100
     url = "/documentation/"
+[[menu.main]]
+    name = "Contact Us"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -90
+    url = "/contact/"
 
 [params]
     # language code for your website

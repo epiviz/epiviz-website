@@ -9,7 +9,7 @@ canonifyURLs = true
 [[menu.main]]
     name = "Epiviz"
     pre = "<i class='fa fa-road'></i>"
-    weight = -110
+    weight = -120
     url = "https://epiviz.github.io/"
 [[menu.main]]
     name = "Documentation"
@@ -19,8 +19,13 @@ canonifyURLs = true
 [[menu.main]]
     name = "Tutorials"
     pre = "<i class='fa fa-road'></i>"
-    weight = -100
+    weight = -110
     url = "https://epiviz.github.io/tutorials/metaviz"
+[[menu.main]]
+    name = "Contact us"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -90
+    url = "/contact/"
 
 [params]
     # language code for your website
