@@ -36,7 +36,7 @@ canonifyURLs = true
     author = "epiviz"
 
     # copyright text; used in footer
-    copyright = "2017 ~ epiviz"
+    copyright = "2012 ~ University of Maryland, Hector Corrada Bravo, Jayaram Kancherla, Florin Chelaru. All Rights Reserved"
 
     # social links, used in footer, these must be full URLs.
     twitter     = "https://twitter.com/epiviz"
