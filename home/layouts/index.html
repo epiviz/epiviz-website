@@ -1,90 +1,114 @@
 {{ partial "header.html" . }}
 
-    <div class="container">
+<div class="container">
 
-        <div class="row">
-            <div class="col-md-9 col-md-offset-1">
-                <p>
-                    Epiviz is an interactive visualization tool for functional genomics data. 
-                    It supports genome navigation like other genome browsers, but allows multiple visualizations of 
-                    data within genomic regions using scatterplots, heatmaps and other user-supplied visualizations. 
-                    It also includes data from the <a target="_blank" href="http://barcode.luhs.org/">Gene Expression Barcode project</a> 
-                    for transcriptome visualization. It has a flexible plugin framework so users can add 
-                    <a target="_blank" href="http://d3js.org/">d3</a> visualizations. You can see a video 
-                    tour <a target="_blank" href="http://youtu.be/099c4wUxozA">here</a>.
-                </p>
+    <div class="row">
+        <div class="col-md-9 col-md-offset-1">
+            <p>
+                Epiviz is an interactive visualization tool for functional genomics data. It supports genome navigation like other genome
+                browsers, but allows multiple visualizations of data within genomic regions using scatterplots, heatmaps
+                and other user-supplied visualizations. It also includes data from the
+                <a target="_blank" href="http://barcode.luhs.org/">Gene Expression Barcode project</a>
+                for transcriptome visualization. It has a flexible plugin framework so users can add
+                <a target="_blank" href="http://d3js.org/">d3</a> visualizations. You can see a video tour
+                <a target="_blank" href="http://youtu.be/099c4wUxozA">here</a>.
+            </p>
 
-                <p style="text-align: center;">
-                    <iframe width="480" height="360" src="https://www.youtube.com/embed/099c4wUxozA" frameborder="0"></iframe>
-                </p>
+            <p style="text-align: center;">
+                <iframe width="480" height="360" src="https://www.youtube.com/embed/099c4wUxozA" frameborder="0"></iframe>
+            </p>
 
-                <p>
-                    The <a target="_blank" href="http://bioconductor.org/packages/release/bioc/html/epivizr.html">Epivizr Bioconductor package</a> 
-                    implements two-way communication between the <code>R/Bioconductor</code> 
-                    computational genomics environment and Epiviz. Objects in an <code>R</code> session 
-                    can be displayed as tracks or plots on Epiviz. Epivizr uses 
-                    <a target="_blank" href="http://www.websocket.org/">WebSockets</a> for communication between 
-                    the browser <code>JavaScript</code> client and the <code>R</code> environment, the same technology 
-                    underlying the popular <a target="_blank" href="http://www.rstudio.com/shiny/">Shiny</a> system 
-                    for authoring interactive web-based reports in <code>R</code>.
-                </p>
-            </div>
-
+            <p>
+                The
+                <a target="_blank" href="http://bioconductor.org/packages/release/bioc/html/epivizr.html">Epivizr Bioconductor package</a>
+                implements two-way communication between the
+                <code>R/Bioconductor</code> computational genomics environment and Epiviz. Objects in an
+                <code>R</code> session can be displayed as tracks or plots on Epiviz. Epivizr uses
+                <a target="_blank" href="http://www.websocket.org/">WebSockets</a> for communication between the browser
+                <code>JavaScript</code> client and the
+                <code>R</code> environment, the same technology underlying the popular
+                <a target="_blank" href="http://www.rstudio.com/shiny/">Shiny</a> system for authoring interactive web-based reports in
+                <code>R</code>.
+            </p>
         </div>
 
-        <h3>Applications</h3>
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-            </div>
-        </div>
+    </div>
 
-        <div class="row">
-            {{ range $.Site.Data.apps.items }}
-            <div class="col-sm-6 col-md-3 col-sm-offset-1">
-                <div class="thumbnail">
-                    <img src="{{.thumb}}" alt="{{.alt}}"/>
-                    <div class="caption">
-                        <h3>{{.title}}</h3>
-                        <p>{{.description}}</p>
-                        <p>
-                            {{ if (not (eq .url "")) }} <a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Website</a> {{end}}
-                            {{ if (not (eq .download "")) }} <a href="{{.download}}" target="_blank" class="btn btn-primary" role="button">Download</a> {{end}}
-                            {{ if (not (eq .giturl "")) }} <a href="{{.giturl}}" target="_blank" class="btn btn-primary" role="button">Github</a> {{end}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-
-        <h3>Tools and Packages </h3>
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            {{ range $.Site.Data.packages.items }}
-            <div class="col-sm-6 col-md-4  col-sm-offset-1">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>{{.title}}</h3>
-                        <p>{{.description}}</p>
-                        <p><a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Github</a> <a href="{{.biocurl}}" target="_blank" class="btn btn-primary" role="button">Bioconductor</a></p>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-            </div>
+    <h3>Applications</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
         </div>
     </div>
+
+    <div class="row">
+        {{ range $.Site.Data.apps.items }}
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="{{.thumb}}" alt="{{.alt}}" />
+                <div class="caption">
+                    <h3>{{.title}}</h3>
+                    <p>{{.description}}</p>
+                    <p>
+                        {{ if (not (eq .url "")) }}
+                        <a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Website</a> {{end}} {{ if (not (eq .download "")) }}
+                        <a href="{{.download}}" target="_blank" class="btn btn-primary" role="button">Download</a> {{end}} {{ if (not (eq .giturl "")) }}
+                        <a href="{{.giturl}}" target="_blank" class="btn btn-primary" role="button">Github</a> {{end}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <h3>Tools and Packages </h3>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        {{ range $.Site.Data.packages.items }}
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>{{.title}}</h3>
+                    <p>{{.description}}</p>
+                    <p>
+                        {{ if (not (eq .url "")) }} <a href="{{.url}}" target="_blank" class="btn btn-primary" role="button">Github</a> {{end}}
+                        {{ if (not (eq .biocurl "")) }}<a href="{{.biocurl}}" target="_blank" class="btn btn-primary" role="button">Bioconductor</a> {{end}}
+                        {{ if (not (eq .docs "")) }}<a href="{{.docs}}" target="_blank" class="btn btn-primary" role="button">Docs</a> {{end}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <h3>Publications</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <ul>
+            {{ range $.Site.Data.publications.items }}
+            <li>{{.title}}
+                <a href="{{.url}}">{{.journal}}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+</div>
 
 
 {{ partial "footer.html" . }}

@@ -1,0 +1,31 @@
+[[items]]
+title = "Kancherla J, Yang Y, Chae H and Bravo HC. (2019) Epiviz File Server: Query, Transform and Interactively Explore Data from Indexed Genomic Files."
+alt = "epiviz file server"
+journal = "bioRxiv preprint"
+url = "https://doi.org/10.1101/865295"
+[[items]]
+title = "Cui Z, Kancherla J, Zhang A, Bravo HC. Elmqvist N (2019) Sherpa: Leveraging User Attention for Computational Steering in Visual Analytics."
+alt = "sherpa"
+journal = "IEEE VDS"
+url = "https://doi.org/10.1109/VDS48975.2019.8973384"
+[[items]]
+title = "Cui Z, Kancherla J, Chang K, Elmqvist N and Bravo HC. (2019) Proactive visual and statistical analysis of genomic data in Epiviz."
+alt = "epiviz feed"
+journal = "Oxford Bioinformatics"
+url = "https://dx.doi.org/10.1093/bioinformatics/btz883"
+[[items]]
+title = "Wagner, J., Chelaru, F., Kancherla, J., Paulson, JN., Felix, V., Mahurkar, A., Corrada Bravo, H. (2018). “Metaviz: interactive statistical and visual analysis of metagenomic data”."
+alt = "metaviz"
+journal = "Nucleic Acids Research"
+url = "https://doi.org/10.1093/nar/gky136"
+[[items]]
+title = "Chelaru, F., Corrada Bravo H. (2015). “Epiviz: a view inside the design of an integrated visual analysis software for genomics”. BMC Bioinformatics 16 (Suppl 11):S4."
+alt = "epiviz"
+journal = "BMC Bioinformatics"
+url = "http://www.biomedcentral.com/1471-2105/16/S11/S4"
+[[items]]
+title = "Chelaru, F., Smith, L., Goldstein, N., Corrada Bravo, H. (2014). “Epiviz: interactive visual analytics for functional genomics data”. Nature Methods 11, 938-940."
+alt = "epiviz"
+journal = "Nature Methods"
+url = "http://www.nature.com/nmeth/journal/v11/n9/full/nmeth.3038.html"
+
