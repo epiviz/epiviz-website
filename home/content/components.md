@@ -45,6 +45,8 @@ The library provides multiple data visualizations for both location (visualizing
 
 Using data from http://epiviz.cbcb.umd.edu
 
+<script src="https://gist.github.com/jkanche/9bb7f79637329d15199464afb31ee2a2.js?file=epiviz-environment"></script>
+
 <epiviz-data-source provider-type="epiviz.data.WebServerDataProvider" provider-id="umd" provider-url="https://epiviz-dev.cbcb.umd.edu/api/"></epiviz-data-source>
 
 <epiviz-environment chr="chr6" start=40076201 end=45076201 no-logo measurements='{"affy1":{
