@@ -6,6 +6,9 @@ paginate = 5
 
 canonifyURLs = true
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [[menu.main]]
     name = "Metaviz"
     pre = "<i class='fa fa-road'></i>"

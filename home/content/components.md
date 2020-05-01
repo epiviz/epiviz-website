@@ -5,7 +5,7 @@ The Epiviz Component Library is a reusable and extensible data visualization lib
 The library provides multiple data visualizations for both location (visualizing data along the genome genes tracks (epiviz-genes-track) or line tracks (epiviz-line-track)) and feature based data (visualizing quantitative measurements like gene expression with scatterplots (epiviz-scatter-plot) and heatmaps (epiviz-heatmap-plot)). A complete list is available in the documentation.
 
 - [GitHub](http://github.com/epiviz/epiviz-chart)
-- [Documentation](http://epiviz.org/documentation)
+- [Documentation](http://epiviz.github.io/epiviz-chart)
 - [Data Source Components](http://epiviz.github.io/polymer/datasource/)   
 - [Chart Components](http://epiviz.github.io/polymer/charts/)
 
@@ -45,14 +45,14 @@ The library provides multiple data visualizations for both location (visualizing
 
 Using data from http://epiviz.cbcb.umd.edu
 
-<epiviz-data-source provider-type="epiviz.data.WebServerDataProvider" provider-id="umd" provider-url="http://epiviz-dev.cbcb.umd.edu/api/"></epiviz-data-source>
+<epiviz-data-source provider-type="epiviz.data.WebServerDataProvider" provider-id="umd" provider-url="https://epiviz-dev.cbcb.umd.edu/api/"></epiviz-data-source>
 
-<epiviz-environment chr="chr6" start=44076201 end=45076201 no-logo measurements='{"affy1":{
-                    "id":"cancer",
-                    "name":"Expression Colon Cancer",
+<epiviz-environment chr="chr6" start=40076201 end=45076201 no-logo measurements='{"affy1":{
+                    "id":"e070",
+                    "name":"Expression Brain Germinal Matrix",
                     "type":"feature",
-                    "datasourceId":"gene_expression",
-                    "datasourceGroup":"affymetrix_probeset",
+                    "datasourceId":"roadmap_rnaseq",
+                    "datasourceGroup":"roadmap_rnaseq",
                     "dataprovider":"umd",
                     "formula":null,
                     "defaultChartType":null,
@@ -62,11 +62,11 @@ Using data from http://epiviz.cbcb.umd.edu
                     "metadata":["probe"]
                 },
                 "affy2":{
-                    "id":"normal",
-                    "name":"Expression Colon Normal",
+                    "id":"e071",
+                    "name":"Expression Brain Hippocampus Middle",
                     "type":"feature",
-                    "datasourceId":"gene_expression",
-                    "datasourceGroup":"affymetrix_probeset",
+                    "datasourceId":"roadmap_rnaseq",
+                    "datasourceGroup":"roadmap_rnaseq",
                     "dataprovider":"umd",
                     "formula":null,
                     "defaultChartType":null,
@@ -87,11 +87,9 @@ Using data from http://epiviz.cbcb.umd.edu
                     "annotation": null,
                     "minValue": null,
                     "maxValue": null,
-                    "metadata": ["gene", "entrez", "exon_starts", "exon_ends"]
+                    "metadata": ["gene", "exon_starts","exon_ends"]
                 }
               }'>
-        <epiviz-genes-track id="test" class="charts" dim-s='["genes"]'></epiviz-genes-track>
-        <epiviz-scatter-plot class="charts" dim-s='["affy1", "affy2"]'></epiviz-scatter-plot>
+        <epiviz-genes-track id="test" slot="charts" dim-s='["genes"]'></epiviz-genes-track>
+        <epiviz-scatter-plot slot="charts" dim-s='["affy1", "affy2"]'></epiviz-scatter-plot>
 </epiviz-environment>
-
-
