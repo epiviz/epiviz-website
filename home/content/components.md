@@ -15,12 +15,12 @@ A complete list is available in the documentation on
 
 <script src="https://gist.github.com/jkanche/9bb7f79637329d15199464afb31ee2a2.js?file=dependencies"></script>
 
-<script src="http://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/jquery/dist/jquery.js"></script>
-<script src="http://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/jquery-ui/jquery-ui.js"></script>
-<script src="http://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/renderingQueues/renderingQueue.js"></script>
+<script src="https://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/jquery/dist/jquery.js"></script>
+<script src="https://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/jquery-ui/jquery-ui.js"></script>
+<script src="https://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/renderingQueues/renderingQueue.js"></script>
 
-<script src="http://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="http://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/epiviz-components.html">
+<script src="https://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="https://ghcdn.rawgit.org/epiviz/epiviz-chart/master/cdn/epiviz-components.html">
 
 
 ### Add Visualiation components to the page - 
